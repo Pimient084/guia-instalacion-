@@ -166,7 +166,7 @@ const App = () => {
           <CodeBlock label="Asignar permisos de Apache" command="chown -R www-data:www-data /var/www/html/squirrelmail/\nsudo chmod -R 775 /var/www/html/squirrelmail/" />
           
           <div className="mt-4 p-4 bg-gray-900 rounded-xl border border-[#7B2FBE]/40">
-            <h4 className="text-[#B5E048] font-mono text-xs mb-3 uppercase tracking-wider font-bold">Configuración Interactiva (Perl)</h4>
+            <h4 className="text-[#B5E048] font-mono text-xs mb-3 uppercase tracking-wider font-bold">Configuración  (Perl)</h4>
             <CodeBlock command="perl /var/www/html/squirrelmail/config/conf.pl" />
 
             {/* Menú 2 */}
