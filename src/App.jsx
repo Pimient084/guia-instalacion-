@@ -149,19 +149,60 @@ const App = () => {
           <CodeBlock label="Asignar permisos de Apache" command="sudo chown -R www-data:www-data /var/www/html/squirrelmail/\nsudo chmod -R 775 /var/www/html/squirrelmail/" />
           
           <div className="mt-4 p-4 bg-gray-900 rounded-xl border border-[#7B2FBE]/40">
-            <h4 className="text-[#B5E048] font-mono text-xs mb-2 uppercase tracking-wider font-bold">Configuración Interactiva (Perl)</h4>
+            <h4 className="text-[#B5E048] font-mono text-xs mb-3 uppercase tracking-wider font-bold">Configuración Interactiva (Perl)</h4>
             <CodeBlock command="sudo perl /var/www/html/squirrelmail/config/conf.pl" />
-            <div className="mt-3 grid grid-cols-2 gap-2">
-              <div className="text-[10px] text-gray-400 border border-[#7B2FBE]/40 p-2 rounded-lg">
-                <span className="text-white block font-bold mb-1">MENÚ 2 (Server)</span>
-                Opción 1: Escribir dominio <br/> <span className="text-[#B5E048]">correo.squirrel</span>
+
+            {/* Menú 2 */}
+            <div className="mt-4">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="bg-[#7B2FBE] text-white text-xs font-bold px-2 py-0.5 rounded">2</span>
+                <span className="text-gray-300 text-xs font-semibold">Server settings</span>
               </div>
-              <div className="text-[10px] text-gray-400 border border-[#7B2FBE]/40 p-2 rounded-lg">
-                <span className="text-white block font-bold mb-1">MENÚ 4 (General)</span>
-                Opción 11: Poner en <span className="text-[#B5E048]">True</span>
+              <div className="ml-4 space-y-1.5">
+                <div className="flex items-start gap-2">
+                  <span className="bg-[#B5E048]/20 text-[#B5E048] text-xs font-bold px-1.5 py-0.5 rounded shrink-0">1</span>
+                  <p className="text-gray-400 text-xs">
+                    <span className="text-white font-semibold">Domain</span> — Escribe el dominio configurado al principio:{' '}
+                    <code className="text-[#B5E048]">correo.squirrel</code>
+                  </p>
+                </div>
               </div>
-              <div className="col-span-2 text-[10px] text-center text-gray-500 mt-1">
-                Presiona <span className="text-white font-bold">S</span> para guardar y <span className="text-white font-bold">Q</span> para salir.
+            </div>
+
+            {/* Menú 4 */}
+            <div className="mt-4">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="bg-[#7B2FBE] text-white text-xs font-bold px-2 py-0.5 rounded">4</span>
+                <span className="text-gray-300 text-xs font-semibold">General options</span>
+              </div>
+              <div className="ml-4 space-y-1.5">
+                <div className="flex items-start gap-2">
+                  <span className="bg-[#B5E048]/20 text-[#B5E048] text-xs font-bold px-1.5 py-0.5 rounded shrink-0">1</span>
+                  <p className="text-gray-400 text-xs"><span className="text-white font-semibold">Data directory</span> — Confirmar ruta por defecto</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="bg-[#B5E048]/20 text-[#B5E048] text-xs font-bold px-1.5 py-0.5 rounded shrink-0">2</span>
+                  <p className="text-gray-400 text-xs"><span className="text-white font-semibold">Attachment directory</span> — Confirmar ruta por defecto</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="bg-[#B5E048]/20 text-[#B5E048] text-xs font-bold px-1.5 py-0.5 rounded shrink-0">11</span>
+                  <p className="text-gray-400 text-xs">
+                    <span className="text-white font-semibold">Allow server-side sorting</span> — Poner en{' '}
+                    <span className="text-[#B5E048] font-bold">True</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Guardar y salir */}
+            <div className="mt-4 flex items-center gap-3 border-t border-gray-700 pt-3">
+              <div className="flex items-center gap-1.5">
+                <kbd className="bg-white text-gray-900 text-xs font-extrabold px-2 py-0.5 rounded">S</kbd>
+                <span className="text-gray-400 text-xs">Guardar cambios</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <kbd className="bg-white text-gray-900 text-xs font-extrabold px-2 py-0.5 rounded">Q</kbd>
+                <span className="text-gray-400 text-xs">Salir del configurador</span>
               </div>
             </div>
           </div>
