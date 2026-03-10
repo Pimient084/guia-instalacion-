@@ -142,7 +142,7 @@ const App = () => {
       content: (
         <>
           <CodeBlock label="Instalar Apache" command="apt install apache2 -y" />
-          <CodeBlock label="Añadir repositorio PHP y dependencias" command="sudo apt install software-properties-common -y\nsudo add-apt-repository ppa:ondrej/php\nsudo apt update" />
+          <CodeBlock label="Añadir repositorio PHP y dependencias" command="apt install software-properties-common -y\nadd-apt-repository ppa:ondrej/php\napt update" />
           <CodeBlock label="Instalar versión específica PHP 7.4" command="apt install php7.4 libapache2-mod-php7.4 php-mysql -y" />
         </>
       )
@@ -162,7 +162,7 @@ const App = () => {
       icon: Cpu,
       content: (
         <>
-          <CodeBlock label="Descargar y desempaquetar" command="cd /var/www/html\nsudo wget https://sourceforge.net/projects/squirrelmail/files/stable/1.4.22/squirrelmail-webmail-1.4.22.zip\nsudo unzip squirrelmail-webmail-1.4.22.zip\nsudo mv squirrelmail-webmail-1.4.22 squirrelmail" />
+          <CodeBlock label="Descargar y desempaquetar" command="cd /var/www/html\nwget https://sourceforge.net/projects/squirrelmail/files/stable/1.4.22/squirrelmail-webmail-1.4.22.zip\nunzip squirrelmail-webmail-1.4.22.zip\nmv squirrelmail-webmail-1.4.22 squirrelmail" />
           <CodeBlock label="Asignar permisos de Apache" command="sudo chown -R www-data:www-data /var/www/html/squirrelmail/\nsudo chmod -R 775 /var/www/html/squirrelmail/" />
           
           <div className="mt-4 p-4 bg-gray-900 rounded-xl border border-[#7B2FBE]/40">
@@ -235,7 +235,7 @@ const App = () => {
             Reemplaza [USER] por el nombre real (ejemplo: juan).
           </div>
           <CodeBlock label="Crear nuevo usuario" command="adduser [USER]" />
-          <CodeBlock label="Configurar directorio de trabajo" command="sudo usermod -m -d /var/www/html/[USER] [USER]\nsudo mkdir -p /var/www/html/[USER]" />
+          <CodeBlock label="Configurar directorio de trabajo" command="usermod -m -d /var/www/html/[USER] [USER]\nmkdir -p /var/www/html/[USER]" />
         </>
       )
     }
